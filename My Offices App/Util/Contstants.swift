@@ -6,4 +6,6 @@
 //  Copyright © 2020 Mert Köksal. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+let KEY_UID = "uid"
