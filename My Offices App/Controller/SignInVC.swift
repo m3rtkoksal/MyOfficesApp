@@ -22,6 +22,13 @@ class SignInVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            print("id found in keychain")
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
+    }
 
     @IBAction func facebookButtonTapped(_ sender: Any) {
         

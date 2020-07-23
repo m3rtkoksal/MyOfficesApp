@@ -126,11 +126,45 @@
                     <connections>
                         <outlet property="emailTextField" destination="3g5-0F-rsV" id="e7f-9V-22t"/>
                         <outlet property="passwordTextField" destination="Hsp-g5-32X" id="BPL-hb-zjQ"/>
+                        <segue destination="tFK-Rj-DnL" kind="show" identifier="goToFeed" id="e83-qB-F0A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-42.028985507246382" y="63.616071428571423"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DI5-3E-qXw">
+            <objects>
+                <navigationController modalPresentationStyle="fullScreen" id="tFK-Rj-DnL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dEN-rx-y0G"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gsD-Bw-KXZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0TP-rl-9m7" kind="relationship" relationship="rootViewController" id="vNr-Q8-bnR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="joy-Vo-csb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="710" y="64"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Lzk-2D-1wH">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="0TP-rl-9m7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JUB-zz-arU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="4SL-Pi-71E"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ego-F8-hIZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8op-If-5B9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1474" y="64"/>
         </scene>
     </scenes>
     <resources>
