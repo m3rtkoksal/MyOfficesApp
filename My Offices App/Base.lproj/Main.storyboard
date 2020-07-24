@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -18,15 +18,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1L-21-M81">
                                 <rect key="frame" x="0.0" y="44" width="414" height="100"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_Pngtree_real_estate_house_logo_template_3555523-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="ltb-2r-h1T">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="_Pngtree_real_estate_house_logo_template_3555523-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="ltb-2r-h1T">
                                         <rect key="frame" x="134" y="0.0" width="151" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="151" id="6LF-k5-6HL"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="17D-CM-RO4"/>
+                                    <constraint firstItem="ltb-2r-h1T" firstAttribute="top" secondItem="w1L-21-M81" secondAttribute="top" id="MTi-BY-M1S"/>
+                                    <constraint firstItem="ltb-2r-h1T" firstAttribute="centerX" secondItem="w1L-21-M81" secondAttribute="centerX" constant="2.5" id="cLB-m3-IT1"/>
+                                    <constraint firstItem="ltb-2r-h1T" firstAttribute="centerY" secondItem="w1L-21-M81" secondAttribute="centerY" id="how-qz-aq1"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KHP-I3-HBs">
@@ -109,9 +114,9 @@
                             <constraint firstItem="ksp-9K-zq2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4yd-Yx-rQf"/>
                             <constraint firstItem="ksp-9K-zq2" firstAttribute="top" secondItem="6go-0e-YBQ" secondAttribute="bottom" constant="30" id="AlU-u0-JeP"/>
                             <constraint firstItem="w1L-21-M81" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dgo-Yf-Nsf"/>
-                            <constraint firstItem="ES4-uP-2fw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HA2-9v-XvN"/>
                             <constraint firstItem="KHP-I3-HBs" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Q9x-L2-rVm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ES4-uP-2fw" secondAttribute="trailing" constant="20" id="Ugy-F3-VhT"/>
+                            <constraint firstItem="ES4-uP-2fw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XgA-QB-cpv"/>
                             <constraint firstItem="6go-0e-YBQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="157" id="euu-1Y-shy"/>
                             <constraint firstItem="ksp-9K-zq2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="fhq-BW-Psi"/>
                             <constraint firstItem="6go-0e-YBQ" firstAttribute="top" secondItem="ES4-uP-2fw" secondAttribute="bottom" constant="21.5" id="kXR-Th-e9l"/>
@@ -150,25 +155,196 @@
             </objects>
             <point key="canvasLocation" x="710" y="64"/>
         </scene>
-        <!--View Controller-->
+        <!--Offices-->
         <scene sceneID="Lzk-2D-1wH">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="0TP-rl-9m7" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="0TP-rl-9m7" customClass="FeedVC" customModule="My_Offices_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JUB-zz-arU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RXM-iS-YSg">
+                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="236" id="y6T-2c-VWa" customClass="PostCell" customModule="My_Offices_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="236"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y6T-2c-VWa" id="AHm-ta-2Gy">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="236"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="sDI-fi-F2n">
+                                                    <rect key="frame" x="25" y="16" width="364" height="204"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Office Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fR-NS-lC0">
+                                                            <rect key="frame" x="0.0" y="0.0" width="364" height="37.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Office Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4f7-ky-Sb3">
+                                                            <rect key="frame" x="0.0" y="72.5" width="364" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20.5" id="6lm-tY-o3X"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Office Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yT6-7w-Ir5">
+                                                            <rect key="frame" x="0.0" y="128" width="364" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20.5" id="LXk-Ds-RQM"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Office Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQN-K7-IJk">
+                                                            <rect key="frame" x="0.0" y="183.5" width="364" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20.5" id="jJD-db-brU"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="sDI-fi-F2n" firstAttribute="leading" secondItem="AHm-ta-2Gy" secondAttribute="leadingMargin" constant="5" id="Veg-b0-RyA"/>
+                                                <constraint firstItem="sDI-fi-F2n" firstAttribute="top" secondItem="AHm-ta-2Gy" secondAttribute="topMargin" constant="5" id="Vfm-cf-o86"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="sDI-fi-F2n" secondAttribute="bottom" constant="5" id="hDN-jZ-hk4"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="sDI-fi-F2n" secondAttribute="trailing" constant="5" id="mDT-ZK-97O"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="officeAddressLabel" destination="oQN-K7-IJk" id="xks-jX-7ht"/>
+                                            <outlet property="officeEmailLabel" destination="yT6-7w-Ir5" id="oFc-Bj-06A"/>
+                                            <outlet property="officeNameLabel" destination="7fR-NS-lC0" id="95h-xW-FTc"/>
+                                            <outlet property="officePhoneLabel" destination="4f7-ky-Sb3" id="yYB-gZ-a1j"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="0TP-rl-9m7" id="l3o-YB-mUo"/>
+                                    <outlet property="delegate" destination="0TP-rl-9m7" id="dzH-6z-4pE"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RXM-iS-YSg" firstAttribute="leading" secondItem="4SL-Pi-71E" secondAttribute="leading" id="9Fn-vy-Pe4"/>
+                            <constraint firstItem="4SL-Pi-71E" firstAttribute="trailing" secondItem="RXM-iS-YSg" secondAttribute="trailing" id="XqH-Rr-xrS"/>
+                            <constraint firstItem="RXM-iS-YSg" firstAttribute="top" secondItem="4SL-Pi-71E" secondAttribute="top" id="ewR-i0-3vk"/>
+                            <constraint firstItem="4SL-Pi-71E" firstAttribute="bottom" secondItem="RXM-iS-YSg" secondAttribute="bottom" id="r39-Bv-ifU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4SL-Pi-71E"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ego-F8-hIZ"/>
+                    <navigationItem key="navigationItem" title="Offices" id="Ego-F8-hIZ">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" landscapeImage="plus" id="UBC-TI-tPZ">
+                            <connections>
+                                <segue destination="baN-47-dH6" kind="show" identifier="ItemDetailsVCNew" id="xs1-SY-Ir1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="RXM-iS-YSg" id="VCC-Xp-3LP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8op-If-5B9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1474" y="64"/>
+            <point key="canvasLocation" x="1473.913043478261" y="63.616071428571423"/>
+        </scene>
+        <!--Add-->
+        <scene sceneID="CZO-sf-RW3">
+            <objects>
+                <viewController id="baN-47-dH6" customClass="ItemDetailsVC" customModule="My_Offices_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d2y-xB-7wY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="03t-eJ-aFo">
+                                <rect key="frame" x="5" y="106" width="404" height="286"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Office Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A2D-ni-5Ct">
+                                        <rect key="frame" x="0.0" y="0.0" width="404" height="34"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Office Phone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OTS-lH-UbO">
+                                        <rect key="frame" x="0.0" y="84" width="404" height="34"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Office Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kFV-1N-UOc">
+                                        <rect key="frame" x="0.0" y="168" width="404" height="34"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Office Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T5Q-V7-aZu">
+                                        <rect key="frame" x="0.0" y="252" width="404" height="34"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZe-LD-EO1" customClass="RoundedButton" customModule="My_Offices_App" customModuleProvider="target">
+                                <rect key="frame" x="157" y="492" width="100" height="50"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fQB-5J-LdD"/>
+                                    <constraint firstAttribute="width" constant="100" id="pG3-hC-kUI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="baN-47-dH6" eventType="touchUpInside" id="gAT-hi-ug2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kZe-LD-EO1" firstAttribute="top" secondItem="03t-eJ-aFo" secondAttribute="bottom" constant="100" id="KAM-p8-Y8q"/>
+                            <constraint firstItem="03t-eJ-aFo" firstAttribute="top" secondItem="4BE-WD-Qd3" secondAttribute="top" constant="50" id="SGJ-Op-jfl"/>
+                            <constraint firstItem="4BE-WD-Qd3" firstAttribute="trailing" secondItem="03t-eJ-aFo" secondAttribute="trailing" constant="5" id="kxi-u5-JsQ"/>
+                            <constraint firstItem="03t-eJ-aFo" firstAttribute="leading" secondItem="4BE-WD-Qd3" secondAttribute="leading" constant="5" id="oH1-bl-AQq"/>
+                            <constraint firstItem="kZe-LD-EO1" firstAttribute="centerX" secondItem="d2y-xB-7wY" secondAttribute="centerX" id="upf-kP-twC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4BE-WD-Qd3"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add" id="bmy-LD-GcV">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="trash" catalog="system" id="FFE-At-6VH"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="officeAddressField" destination="T5Q-V7-aZu" id="Wse-lW-7nx"/>
+                        <outlet property="officeEmailField" destination="kFV-1N-UOc" id="wMZ-E2-Vs8"/>
+                        <outlet property="officeNameField" destination="A2D-ni-5Ct" id="MVz-yY-bSL"/>
+                        <outlet property="officePhoneField" destination="OTS-lH-UbO" id="Xkp-Y3-iGp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Puf-vV-y7Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2372" y="64"/>
         </scene>
     </scenes>
     <resources>
         <image name="_Pngtree_real_estate_house_logo_template_3555523-removebg-preview" width="500" height="500"/>
         <image name="f" width="352" height="328"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
     </resources>
 </document>
