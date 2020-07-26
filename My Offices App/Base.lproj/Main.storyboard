@@ -164,7 +164,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RXM-iS-YSg">
-                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
+                                <rect key="frame" x="0.0" y="106" width="414" height="702"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="236" id="y6T-2c-VWa" customClass="PostCell" customModule="My_Offices_App" customModuleProvider="target">
@@ -177,7 +177,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="sDI-fi-F2n">
                                                     <rect key="frame" x="25" y="16" width="364" height="204"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Office Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fR-NS-lC0">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Office Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fR-NS-lC0">
                                                             <rect key="frame" x="0.0" y="0.0" width="364" height="37.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -236,19 +236,26 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="RXM-iS-YSg" firstAttribute="top" secondItem="4SL-Pi-71E" secondAttribute="top" constant="50" id="7W8-tU-npe"/>
                             <constraint firstItem="RXM-iS-YSg" firstAttribute="leading" secondItem="4SL-Pi-71E" secondAttribute="leading" id="9Fn-vy-Pe4"/>
                             <constraint firstItem="4SL-Pi-71E" firstAttribute="trailing" secondItem="RXM-iS-YSg" secondAttribute="trailing" id="XqH-Rr-xrS"/>
-                            <constraint firstItem="RXM-iS-YSg" firstAttribute="top" secondItem="4SL-Pi-71E" secondAttribute="top" id="ewR-i0-3vk"/>
                             <constraint firstItem="4SL-Pi-71E" firstAttribute="bottom" secondItem="RXM-iS-YSg" secondAttribute="bottom" id="r39-Bv-ifU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4SL-Pi-71E"/>
                     </view>
                     <navigationItem key="navigationItem" title="Offices" id="Ego-F8-hIZ">
-                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" landscapeImage="plus" id="UBC-TI-tPZ">
-                            <connections>
-                                <segue destination="baN-47-dH6" kind="show" identifier="ItemDetailsVCNew" id="xs1-SY-Ir1"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="plus" catalog="system" landscapeImage="plus" id="UBC-TI-tPZ">
+                                <connections>
+                                    <segue destination="baN-47-dH6" kind="show" identifier="ItemDetailsVCNew" id="xs1-SY-Ir1"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="person" catalog="system" id="IRa-6h-1xd">
+                                <connections>
+                                    <segue destination="MDr-FS-iZe" kind="show" id="Oez-Ko-rjo"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="RXM-iS-YSg" id="VCC-Xp-3LP"/>
@@ -258,10 +265,82 @@
             </objects>
             <point key="canvasLocation" x="1473.913043478261" y="63.616071428571423"/>
         </scene>
+        <!--RegisterVC-->
+        <scene sceneID="TyA-Ik-fxN">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="MDr-FS-iZe" customClass="RegisterVC" customModule="My_Offices_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YC9-3H-KKS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="gS6-tI-MR5">
+                                <rect key="frame" x="5" y="106" width="404" height="202"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CfN-09-Or8">
+                                        <rect key="frame" x="0.0" y="0.0" width="404" height="34"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F1X-6b-mfc">
+                                        <rect key="frame" x="0.0" y="84" width="404" height="34"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cellphone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9V3-EF-TW1">
+                                        <rect key="frame" x="0.0" y="168" width="404" height="34"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d42-ni-4ON" customClass="RoundedButton" customModule="My_Offices_App" customModuleProvider="target">
+                                <rect key="frame" x="157" y="396" width="100" height="50"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="EeA-5q-dxS"/>
+                                    <constraint firstAttribute="height" constant="50" id="bE4-Qt-gax"/>
+                                </constraints>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="MDr-FS-iZe" eventType="touchUpInside" id="frJ-hd-N53"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="d42-ni-4ON" firstAttribute="top" secondItem="gS6-tI-MR5" secondAttribute="bottom" constant="88" id="FX4-kx-nRR"/>
+                            <constraint firstItem="gS6-tI-MR5" firstAttribute="leading" secondItem="exV-Vg-rOK" secondAttribute="leading" constant="5" id="Igs-A0-1J1"/>
+                            <constraint firstItem="d42-ni-4ON" firstAttribute="centerX" secondItem="gS6-tI-MR5" secondAttribute="centerX" id="Ym4-Mt-ocP"/>
+                            <constraint firstItem="exV-Vg-rOK" firstAttribute="trailing" secondItem="gS6-tI-MR5" secondAttribute="trailing" constant="5" id="iF3-W9-PwR"/>
+                            <constraint firstItem="gS6-tI-MR5" firstAttribute="top" secondItem="exV-Vg-rOK" secondAttribute="top" constant="50" id="jXS-Fz-xOk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="exV-Vg-rOK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pib-93-6aQ"/>
+                    <connections>
+                        <outlet property="userMobileField" destination="9V3-EF-TW1" id="aii-Fk-T45"/>
+                        <outlet property="userNameField" destination="CfN-09-Or8" id="WcM-YG-2PZ"/>
+                        <outlet property="userSurnameField" destination="F1X-6b-mfc" id="yBc-iz-IYT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gb1-Cm-JeM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1473.913043478261" y="809.59821428571422"/>
+        </scene>
         <!--Add-->
         <scene sceneID="CZO-sf-RW3">
             <objects>
-                <viewController id="baN-47-dH6" customClass="ItemDetailsVC" customModule="My_Offices_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="baN-47-dH6" customClass="AddItemVC" customModule="My_Offices_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d2y-xB-7wY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -344,6 +423,7 @@
     <resources>
         <image name="_Pngtree_real_estate_house_logo_template_3555523-removebg-preview" width="500" height="500"/>
         <image name="f" width="352" height="328"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="trash" catalog="system" width="121" height="128"/>
     </resources>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ItemDetailsVC: UIViewController {
+class AddItemVC: UIViewController {
 
     @IBOutlet weak var officeNameField: UITextField!
     @IBOutlet weak var officePhoneField: UITextField!
