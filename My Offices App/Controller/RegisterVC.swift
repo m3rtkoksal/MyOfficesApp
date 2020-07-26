@@ -19,18 +19,24 @@ class RegisterVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        DataService.ds.REF_USER_CURRENT
     }
-    func post() {
+    func updateUser() {
+    
         let name = userNameField.text
         let surname = userSurnameField.text
         let cellphone = userMobileField.text
+        let userID = (Auth.auth().currentUser?.uid)!
         
-        if let userID = Auth.auth().currentUser?.uid {
-            let userData = ["name": Auth.auth().currentUser?.providerID] as! Dictionary <String,String>
-        }
+        
+        let userInfo: Dictionary<String,Any> = ["cellphone": cellphone, "surname": surname , "name": name]
+        
+        let firebasePost = DataService.ds.REF_USERS.child(userID)
+        firebasePost.setValue(userInfo)
+        
     }
     @IBAction func saveButtonTapped(_ sender: Any) {
+        
+        updateUser()
         
     }
     

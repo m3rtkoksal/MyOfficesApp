@@ -22,7 +22,26 @@ class AddItemVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    func postToFirebase() {
+        
+        let post: Dictionary<String,Any> = ["address": officeAddressField.text!, "email": officeEmailField.text , "name": officeNameField.text, "phone": String(officePhoneField.text!)]
+        
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        officeNameField.text = ""
+        officePhoneField.text = ""
+        officeEmailField.text = ""
+        officeAddressField.text = ""
+        
+    }
+    
     @IBAction func saveButtonTapped(_ sender: Any) {
+        
+        
+        postToFirebase()
+        
     }
     
 }

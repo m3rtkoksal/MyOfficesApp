@@ -17,8 +17,10 @@ class PostCell: UITableViewCell {
     
     func configureCell(post: Post) {
         officeNameLabel.text = post.officeName
-        officePhoneLabel.text = String(post.officePhone)
+        officePhoneLabel.text = post.officePhone
         officeEmailLabel.text = post.officeEmail
         officeAddressLabel.text = post.officeAddress
     }
+    
+    
 }

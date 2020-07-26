@@ -12,9 +12,7 @@ import Firebase
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
-    
-    var inSearchMode = false
+   
     var filteredPost = [Post]()
     
     var posts = [Post]()

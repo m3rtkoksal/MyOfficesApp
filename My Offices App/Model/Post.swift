@@ -12,7 +12,7 @@ import Firebase
 class Post {
     
     private var _officeName: String!
-    private var _officePhone: Int!
+    private var _officePhone: String!
     private var _officeEmail: String!
     private var _officeAddress: String!
     private var _postID: String!
@@ -22,7 +22,7 @@ class Post {
         return _officeName
     }
     
-    var officePhone: Int {
+    var officePhone: String {
         return _officePhone
     }
     
@@ -34,7 +34,7 @@ class Post {
         return _officeAddress
     }
     
-    init(officeName: String, officePhone: Int, officeEmail: String, officeAddress: String) {
+    init(officeName: String, officePhone: String, officeEmail: String, officeAddress: String) {
         self._officeName = officeName
         self._officePhone = officePhone
         self._officeEmail = officeEmail
@@ -48,7 +48,7 @@ class Post {
             self._officeName = officeName
         }
         
-        if let officePhone = postData["phone"] as? Int {
+        if let officePhone = postData["phone"] as? String {
             self._officePhone = officePhone
         }
         
